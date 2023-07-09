@@ -8,7 +8,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Build Code
-        run: git clone https://github.com/SukkaW/Lenovo-Y9000X-Hackintosh && cd Lenovo-Y9000X-Hackintosh && chmod +x **/*.sh && ./build.sh
+        run: git clone https://github.com/mqk233/Lenovo-Y9000X-Hackintosh && cd Lenovo-Y9000X-Hackintosh && chmod +x **/*.sh && ./build.sh
       - name: Create Release
         id: create-release
         uses: actions/create-release@latest
