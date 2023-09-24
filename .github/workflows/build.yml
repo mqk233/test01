@@ -8,8 +8,9 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Build Code
-        run: git clone https://github.com/mqk233/Lenovo-Y9000X-Hackintosh && cd Lenovo-Y9000X-Hackintosh && chmod +x **/*.sh && ./build.sh
-        run: zip --junk-paths Lenovo-Y9000X-Hackintosh.zip ./Output/*
+        run: |
+          git clone https://github.com/mqk233/Lenovo-Y9000X-Hackintosh && cd Lenovo-Y9000X-Hackintosh && chmod +x **/*.sh && ./build.sh
+          zip --junk-paths Lenovo-Y9000X-Hackintosh.zip ./Output/*
       - name: Create Release
         id: create-release
         uses: actions/create-release@latest
